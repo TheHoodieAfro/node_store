@@ -11,15 +11,15 @@ function routes(app) {
     //Users
     app.get('/api/user', verifyToken, UserController.getUser)
     app.get('api/user/:id', verifyToken, UserController.getUserById)
-    app.post('/api/user', validate(createUserSchema), UserController.createUserHandler)
-    app.put('/api/user/:id', validate(createUserSchema), UserController.updateUserHandler)
+    app.post('/api/user', validate(createUserSchema), UserController.createUser)
+    app.put('/api/user/:id', validate(createUserSchema), UserController.updateUser)
     app.delete('/api/user/:id', UserController.deleteUser)
 
     //Products
     app.get('/api/product', verifyToken, ProductController.getProduct)
     app.get('api/product/:id', verifyToken, ProductController.getProductById)
     app.post('/api/product', validate(createProductSchema), ProductController.createProduct)
-    app.put('/api/product/:id', validate(createProductchema), ProductController.updateProductHandler)
+    app.put('/api/product/:id', validate(createProductSchema), ProductController.updateProduct)
     app.delete('/api/product/:id', ProductController.deleteProduct)
 }
 

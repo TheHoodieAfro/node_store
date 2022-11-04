@@ -8,6 +8,9 @@ import verifyToken from "../middleware/auth.js";
 
 function routes(app) {
 
+    //Auth
+    app.post('/api/auth', UserController.login)
+
     //Users
     app.get('/api/user', verifyToken, UserController.getUser)
     app.get('api/user/:id', verifyToken, UserController.getUserById)

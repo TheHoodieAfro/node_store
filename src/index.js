@@ -2,8 +2,8 @@ import express, {Express, Request, Response} from "express";
 import dotenv from 'dotenv';
 import cors from 'cors';
 import debug from "debug";
-import routes from "./routes";
-import connect from './utils/connect'
+import connect from './utils/connection.js';
+import routes from "./routes/index.js";
 
 dotenv.config()
 

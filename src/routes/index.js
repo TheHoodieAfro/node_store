@@ -1,9 +1,10 @@
 import { Express, Request, Response } from "express";
-import UserController from "../controllers/user.controller";
-import ProductController from "../controllers/product.controller";
-import validate from "../middleware/validateSchema";
-import {createUserSchema} from "../schemas/user.schema"
-import verifyToken from "../middleware/auth";
+import UserController from "../controllers/user.controller.js";
+import ProductController from "../controllers/product.controller.js";
+import validate from "../middleware/validateSchema.js";
+import {createUserSchema} from "../schemas/user.schema.js"
+import {createProductSchema} from "../schemas/product.schema.js"
+import verifyToken from "../middleware/auth.js";
 
 function routes(app) {
 

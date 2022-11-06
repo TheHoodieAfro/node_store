@@ -46,6 +46,15 @@ class ProductService {
             throw new Error(error)
         }
     }
+
+    async findProductByName(namee) {
+        try {
+            const product = await Product.findOne({name: namee})
+            return product
+        }catch (error) {
+            throw new Error(error)
+        }
+    }
 }
 
 export default new ProductService()

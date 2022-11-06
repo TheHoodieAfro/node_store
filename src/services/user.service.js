@@ -46,6 +46,15 @@ class UserService {
             throw new Error(error)
         }
     }
+
+    async findUserByIdentification(identificationn) {
+        try {
+            const user = await User.findOne({identification: identificationn})
+            return user
+        }catch (error) {
+            throw new Error(error)
+        }
+    }
 }
 
 export default new UserService()

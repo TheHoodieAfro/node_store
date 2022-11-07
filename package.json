@@ -9,7 +9,7 @@
     "start": "node src/index.js",
     "dev": "DEBUG=* nodemon -q src/index.js"
   },
-  "author": "Cristian Sanchez",
+  "author": "Cristian Sanchez Pelaez",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",

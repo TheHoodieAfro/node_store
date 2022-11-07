@@ -15,7 +15,7 @@ function routes(app) {
     validate(createUserSchema),
     UserController.updateUser
   );
-  app.delete("/api/user/:id", UserController.deleteUser);
+  app.delete("/api/user/:id", validate(createUserSchema), UserController.deleteUser);
 
   app.post("/api/auth", UserController.login);
 
@@ -32,7 +32,7 @@ function routes(app) {
     validate(createProductSchema),
     ProductController.updateProduct
   );
-  app.delete("/api/product/:id", ProductController.deleteProduct);
+  app.delete("/api/product/:id", validate(createUserSchema), ProductController.deleteProduct);
 }
 
 export default routes;

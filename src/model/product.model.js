@@ -5,7 +5,7 @@ const productSchema = new mongoose.Schema({
     description: {type: String},
     quantity: {type: Number, required: true},
     brand: {type: String, required: true},
-    owner: {type: Number, required: true},
+    owner: {type: String, required: true},
 }, {
     timestamps: true
 })

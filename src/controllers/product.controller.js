@@ -40,7 +40,7 @@ class ProductController {
     try {
       debuglog("********************************");
       debuglog(req);
-      const productExist = await ProductService.findUserByName(req.body.name);
+      const productExist = await ProductService.findProductByName(req.body.name);
       if (productExist !== null) {
         return res.status(409).send("Product already exists");
       }

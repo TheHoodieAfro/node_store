@@ -14,8 +14,8 @@ export const createProductSchema = object({
         required_error: 'Brand is required',
     }),
 
-    owner: number({
+    owner: string({
         required_error: 'Owner is required',
-        invalid_type_error: "Owner must be a number",
+        invalid_type_error: "Owner must be a string",
     }),
 })

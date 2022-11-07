@@ -102,14 +102,16 @@ class UserController {
 
   async login(req, res) {
     try {
-      const user = await UserService.findUserByEmail(req.body.email);
+      const user = await UserService.findUserByIdentification(req.body.identification);
+      debuglog(req.body.password);
+      debuglog(user.password);
       if (
         user !== null &&
         (await bcrypt.compare(req.body.password, user.password))
       ) {
         const token = jwt.sign(
           { user_id: user._id, email: user.email },
-          process.env.TOKENSECRET,
+          process.env.SECRET,
           { expiresIn: "2h" }
         );
 

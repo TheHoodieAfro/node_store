@@ -1,4 +1,4 @@
-import {object, string, number} from 'zod'
+import {object, string, number, boolean} from 'zod'
 
 export const createUserSchema = object({
     name: string({
@@ -22,7 +22,7 @@ export const createUserSchema = object({
         required_error: 'Password is required',
     }).min(6, 'Password too short'),
 
-    active: number({
+    active: boolean({
         required_error: 'Active is required',
         invalid_type_error: "Active must be a boolean",
     }),

@@ -1,4 +1,3 @@
-import { Express, Request, Response } from "express";
 import UserController from "../controllers/user.controller.js";
 import ProductController from "../controllers/product.controller.js";
 import validate from "../middleware/validateSchema.js";

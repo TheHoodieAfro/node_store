@@ -1,9 +1,7 @@
-import { Request, Response } from "express";
-import UserService from "../services/user.service";
+import UserService from "../services/user.service.js";
 import debug from "debug";
 import bcrypt from "bcrypt";
-import jwt, { Secret } from "jsonwebtoken";
-import { UserDocument } from "../model/user.model";
+import jwt from "jsonwebtoken";
 
 const debuglog = debug("app");
 

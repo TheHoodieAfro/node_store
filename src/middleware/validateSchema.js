@@ -1,6 +1,3 @@
-import { Request, Response, NextFunction } from "express";
-import { AnyZodObject } from "zod";
-
 const validate = (Schema) => {
     return (req, res, next) => {
         try {
